@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dr. Neemias Advocacia — Segurança Jurídica em Direito Imobiliário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-white text-gray-900 antialiased overflow-x-hidden" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial;">
+    <!-- Cabeçalho fixo com navegação -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out">
+        <div class="absolute inset-0 bg-white/80 border-b border-gray-200/50 backdrop-blur-xl"></div>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Marca -->
+                <a href="#hero" class="flex items-center gap-3 group z-10">
+                    <div class="w-9 h-9 rounded-xl bg-gray-900 text-white grid place-items-center shadow-sm group-hover:scale-105 transition-transform duration-200">
+                        <span class="text-sm font-bold tracking-tighter">N</span>
+                    </div>
+                    <span class="text-xl font-semibold tracking-tight">Dr. Neemias Advocacia</span>
+                </a>
+
+                <!-- Navegação por seções -->
+                <nav class="hidden lg:flex items-center">
+                    <div class="flex items-center gap-1 bg-gray-100/80 rounded-full p-1.5 backdrop-blur">
+                        <a href="#hero" class="section-nav px-4 py-2 rounded-full text-sm font-medium transition-all relative overflow-hidden group" data-section="hero">
+                            <span class="relative z-10">Início</span>
+                            <div class="absolute inset-0 bg-white shadow-sm rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        </a>
+                        <a href="#about" class="section-nav px-4 py-2 rounded-full text-sm font-medium transition-all relative overflow-hidden group" data-section="about">
+                            <span class="relative z-10">Sobre</span>
+                            <div class="absolute inset-0 bg-white shadow-sm rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        </a>
+                        <a href="#atuacao" class="section-nav px-4 py-2 rounded-full text-sm font-medium transition-all relative overflow-hidden group" data-section="atuacao">
+                            <span class="relative z-10">Atuação</span>
+                            <div class="absolute inset-0 bg-white shadow-sm rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        </a>
+                        <a href="#process" class="section-nav px-4 py-2 rounded-full text-sm font-medium transition-all relative overflow-hidden group" data-section="process">
+                            <span class="relative z-10">Processo</span>
+                            <div class="absolute inset-0 bg-white shadow-sm rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        </a>
+                        <a href="#testimonials" class="section-nav px-4 py-2 rounded-full text-sm font-medium transition-all relative overflow-hidden group" data-section="testimonials">
+                            <span class="relative z-10">Depoimentos</span>
+                            <div class="absolute inset-0 bg-white shadow-sm rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        </a>
+                        <a href="#contact" class="section-nav px-4 py-2 rounded-full text-sm font-medium transition-all relative overflow-hidden group" data-section="contact">
+                            <span class="relative z-10">Contato</span>
+                            <div class="absolute inset-0 bg-white shadow-sm rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- CTA -->
+                <div class="flex items-center gap-3">
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-900 text-white font-medium text-sm hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>Agendar Consulta</span>
+                    </a>
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 lg:hidden transform translate-x-full transition-transform duration-300">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-gray-900 text-white grid place-items-center">
+                <span class="text-sm font-bold tracking-tighter">N</span>
+              </div>
+              <span class="text-xl font-semibold">Dr. Neemias Advocacia</span>
+            </div>
+            <button id="closeMobileMenu" class="p-2 rounded-xl hover:bg-gray-100">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+          </div>
+          <nav class="space-y-2">
+            <a href="#hero" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 font-medium transition-colors"><i data-lucide="home" class="w-5 h-5 text-gray-500"></i>Início</a>
+            <a href="#about" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 font-medium transition-colors"><i data-lucide="users" class="w-5 h-5 text-gray-500"></i>Sobre</a>
+            <a href="#atuacao" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 font-medium transition-colors"><i data-lucide="gavel" class="w-5 h-5 text-gray-500"></i>Atuação</a>
+            <a href="#process" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 font-medium transition-colors"><i data-lucide="layers" class="w-5 h-5 text-gray-500"></i>Processo</a>
+            <a href="#testimonials" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 font-medium transition-colors"><i data-lucide="star" class="w-5 h-5 text-gray-500"></i>Depoimentos</a>
+            <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-gray-50 font-medium transition-colors"><i data-lucide="mail" class="w-5 h-5 text-gray-500"></i>Contato</a>
+          </nav>
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <a href="#contact" class="flex items-center justify-center gap-3 px-4 py-3 rounded-xl bg-gray-900 text-white font-medium"><i data-lucide="calendar" class="w-5 h-5"></i>Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="relative">
+        <!-- Hero -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0">
+                <div id="heroBase" class="absolute inset-0 scale-110" style="will-change: transform;">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2070&q=80" alt="Vista de uma cidade com prédios de escritórios" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-gray-900/70"></div>
+                </div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <div data-anim="fade-up" data-delay="100" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-4 py-2 text-white text-sm font-medium mb-8 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                        <span>Especialistas em Direito Imobiliário</span>
+                    </div>
+                    <h1 data-anim="fade-up" data-delay="200" class="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tighter text-white leading-[0.9] mb-8 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <span class="block">Protegendo seu</span>
+                        <span class="block font-semibold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Patrimônio Imobiliário</span>
+                    </h1>
+                    <p data-anim="fade-up" data-delay="300" class="text-xl sm:text-2xl text-white/90 font-light leading-relaxed mb-12 max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Assessoria jurídica completa para garantir transações seguras, regularizar imóveis e resolver conflitos com máxima eficiência.
+                    </p>
+                    <div data-anim="fade-up" data-delay="400" class="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <a href="#contact" class="inline-flex items-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1">
+                            <span>Fale com um Especialista</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div data-anim="fade-up" data-delay="500" class="mt-10 sm:mt-12 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                    <div class="mx-auto w-full max-w-3xl rounded-2xl border border-white/20 bg-white/10 px-6 py-5 backdrop-blur">
+                        <dl class="grid grid-cols-3 divide-x divide-white/15 text-center">
+                            <div class="px-3">
+                                <dd class="counter text-3xl font-light leading-tight text-white" data-target="1200">0</dd>
+                                <dt class="mt-1 text-xs sm:text-sm text-white/70">Casos de Sucesso</dt>
+                            </div>
+                            <div class="px-3">
+                                <dd class="counter text-3xl font-light leading-tight text-white" data-target="20">0</dd>
+                                <dt class="mt-1 text-xs sm:text-sm text-white/70">Anos de Experiência</dt>
+                            </div>
+                            <div class="px-3">
+                                <dd class="counter text-3xl font-light leading-tight text-white" data-target="99">0</dd>
+                                <dt class="mt-1 text-xs sm:text-sm text-white/70">Satisfação dos Clientes</dt>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="about" class="relative py-32 bg-white overflow-hidden">
+            <div id="aboutParallax" class="absolute inset-0 opacity-20" style="will-change: transform;">
+                <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-blue-50 to-indigo-50 blur-3xl"></div>
+                <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-purple-50 to-pink-50 blur-3xl"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div data-anim="fade-left" data-delay="100" class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 rounded-full px-4 py-2 text-sm font-medium mb-6 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                            <i data-lucide="landmark" class="w-4 h-4"></i>
+                            <span>Dr. Neemias Advocacia</span>
+                        </div>
+                        <h2 data-anim="fade-left" data-delay="200" class="text-5xl sm:text-6xl font-light tracking-tighter mb-6 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                            Transformando complexidade jurídica em 
+                            <span class="font-semibold text-indigo-600">tranquilidade para você</span>
+                        </h2>
+                        <p data-anim="fade-left" data-delay="300" class="text-xl text-gray-600 leading-relaxed mb-8 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                            Somos um escritório dedicado exclusivamente ao Direito Imobiliário, oferecendo uma abordagem estratégica e personalizada para cada cliente. Nossa missão é prevenir litígios e solucionar questões imobiliárias com segurança, agilidade e transparência.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div data-anim="fade-left" data-delay="400" class="flex items-center gap-4 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                                <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 grid place-items-center flex-shrink-0"><i data-lucide="file-check-2" class="w-6 h-6"></i></div>
+                                <div><h4 class="font-semibold text-lg">Assessoria em Contratos</h4><p class="text-gray-600">Elaboração e revisão de contratos para proteger seus interesses.</p></div>
+                            </div>
+                            <div data-anim="fade-left" data-delay="500" class="flex items-center gap-4 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                                <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 grid place-items-center flex-shrink-0"><i data-lucide="search" class="w-6 h-6"></i></div>
+                                <div><h4 class="font-semibold text-lg">Due Diligence Completa</h4><p class="text-gray-600">Análise de riscos e auditoria para compras e vendas seguras.</p></div>
+                            </div>
+                            <div data-anim="fade-left" data-delay="600" class="flex items-center gap-4 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                                <div class="w-12 h-12 rounded-xl bg-green-100 text-green-600 grid place-items-center flex-shrink-0"><i data-lucide="gavel" class="w-6 h-6"></i></div>
+                                <div><h4 class="font-semibold text-lg">Resolução de Disputas</h4><p class="text-gray-600">Atuação estratégica em litígios e negociações.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div data-anim="fade-right" data-delay="200" class="relative opacity-0 translate-x-10 transition-all duration-700 ease-out">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1632&q=80" alt="Advogados em reunião em um escritório moderno" class="w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-2xl">
+                            <div data-anim="scale-in" data-delay="400" class="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-xl border border-gray-100 opacity-0 scale-95 transition-all duration-700 ease-out">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white grid place-items-center"><i data-lucide="users" class="w-6 h-6"></i></div>
+                                    <div>
+                                        <div class="counter text-2xl font-semibold" data-target="800">0</div>
+                                        <div class="text-gray-600 text-sm">Clientes Atendidos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Áreas de Atuação -->
+        <section id="atuacao" class="relative py-32 bg-gray-900 text-white overflow-hidden">
+            <div id="expertiseParallax" class="absolute inset-0 opacity-5" style="will-change: transform;">
+                <div class="absolute top-20 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-blue-900 to-indigo-900 blur-3xl"></div>
+                <div class="absolute bottom-20 -left-40 w-80 h-80 rounded-full bg-gradient-to-br from-purple-900 to-pink-900 blur-3xl"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div data-anim="fade-up" data-delay="100" class="inline-flex items-center gap-2 bg-white/10 text-white rounded-full px-4 py-2 text-sm font-medium mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <i data-lucide="gavel" class="w-4 h-4"></i>
+                        <span>Nossos Serviços</span>
+                    </div>
+                    <h2 data-anim="fade-up" data-delay="200" class="text-5xl sm:text-6xl font-light tracking-tighter mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Nossas Áreas
+                        <span class="font-semibold">de Atuação</span>
+                    </h2>
+                    <p data-anim="fade-up" data-delay="300" class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Oferecemos um portfólio completo de serviços para cobrir todas as necessidades do mercado imobiliário.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div data-anim="scale-in" data-delay="100" class="opacity-0 scale-95 transition-all duration-700 ease-out">
+                        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white grid place-items-center mb-6"><i data-lucide="search-check" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-semibold mb-4 tracking-tight">Análise e Consultoria</h3>
+                            <p class="text-white/70 leading-relaxed mb-6">Mitigamos riscos através de auditorias detalhadas e consultoria estratégica para seus investimentos.</p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-blue-400 font-semibold transition-all"><span>Saiba Mais</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 2 (Destaque) -->
+                    <div data-anim="scale-in" data-delay="200" class="opacity-0 scale-95 transition-all duration-700 ease-out lg:-mt-4">
+                        <div class="relative bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-white h-full border border-white/10">
+                            <div class="inline-flex items-center gap-1 bg-purple-500/20 text-purple-300 rounded-full px-3 py-1 text-xs font-semibold mb-4"><i data-lucide="star" class="w-3 h-3"></i><span>Mais procurado</span></div>
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 text-white grid place-items-center mb-6"><i data-lucide="file-text" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-semibold mb-4 tracking-tight">Contratos e Transações</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">Estruturamos operações imobiliárias com segurança jurídica, desde a negociação até o registro.</p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-purple-400 font-semibold transition-all"><span>Saiba Mais</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div data-anim="scale-in" data-delay="300" class="opacity-0 scale-95 transition-all duration-700 ease-out">
+                         <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 text-white grid place-items-center mb-6"><i data-lucide="scale" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-semibold mb-4 tracking-tight">Litígios e Disputas</h3>
+                            <p class="text-white/70 leading-relaxed mb-6">Defendemos seus direitos em processos judiciais e extrajudiciais com foco em resultados.</p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-green-400 font-semibold transition-all"><span>Saiba Mais</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div data-anim="scale-in" data-delay="400" class="opacity-0 scale-95 transition-all duration-700 ease-out">
+                         <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 text-white grid place-items-center mb-6"><i data-lucide="folder-kanban" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-semibold mb-4 tracking-tight">Questões Regulatórias</h3>
+                            <p class="text-white/70 leading-relaxed mb-6">Navegamos pela burocracia para garantir a conformidade e a regularidade do seu imóvel.</p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-orange-400 font-semibold transition-all"><span>Saiba Mais</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                     <div data-anim="scale-in" data-delay="500" class="opacity-0 scale-95 transition-all duration-700 ease-out">
+                         <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 text-white grid place-items-center mb-6"><i data-lucide="home" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-semibold mb-4 tracking-tight">Condomínios</h3>
+                            <p class="text-white/70 leading-relaxed mb-6">Assessoria completa para síndicos e condôminos em questões de convenção, inadimplência e conflitos.</p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-teal-400 font-semibold transition-all"><span>Saiba Mais</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                     <div data-anim="scale-in" data-delay="600" class="opacity-0 scale-95 transition-all duration-700 ease-out">
+                         <div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white grid place-items-center mb-6"><i data-lucide="building-2" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-semibold mb-4 tracking-tight">Incorporação Imobiliária</h3>
+                            <p class="text-white/70 leading-relaxed mb-6">Acompanhamento jurídico em todas as fases do empreendimento, do terreno à entrega das chaves.</p>
+                            <a href="#contact" class="inline-flex items-center gap-2 text-pink-400 font-semibold transition-all"><span>Saiba Mais</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processo -->
+        <section id="process" class="relative py-32 bg-white overflow-hidden">
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div data-anim="fade-up" data-delay="100" class="inline-flex items-center gap-2 bg-purple-100 text-purple-700 rounded-full px-4 py-2 text-sm font-medium mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                        <span>Nossa Metodologia</span>
+                    </div>
+                    <h2 data-anim="fade-up" data-delay="200" class="text-5xl sm:text-6xl font-light tracking-tighter mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Da consulta à
+                        <span class="font-semibold">solução</span>
+                    </h2>
+                    <p data-anim="fade-up" data-delay="300" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Um processo transparente e estruturado para garantir a melhor defesa dos seus interesses.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-200 via-purple-200 to-green-200 transform -translate-x-1/2 hidden lg:block"></div>
+                    <div class="space-y-16 lg:space-y-24">
+                        <!-- Etapa 1 -->
+                        <div class="relative flex flex-col lg:flex-row items-center gap-8">
+                            <div data-anim="fade-left" data-delay="100" class="lg:w-1/2 lg:text-right lg:pr-16 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                                <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 rounded-full px-4 py-2 text-sm font-medium mb-4"><span>Fase 1</span></div>
+                                <h3 class="text-3xl font-semibold mb-4">Consulta & Análise</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg mb-6">Ouvimos atentamente seu caso, analisamos os documentos e identificamos os pontos críticos e as oportunidades.</p>
+                            </div>
+                            <div data-anim="scale-in" data-delay="200" class="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white grid place-items-center shadow-xl opacity-0 scale-95 transition-all duration-700 ease-out">
+                                <i data-lucide="file-search" class="w-10 h-10"></i>
+                                <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-blue-100 text-blue-600 grid place-items-center text-sm font-bold">1</div>
+                            </div>
+                            <div data-anim="fade-right" data-delay="300" class="lg:w-1/2 lg:pl-16 opacity-0 translate-x-10 transition-all duration-700 ease-out">
+                                <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1170&q=80" alt="Advogada analisando documentos com cliente" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                            </div>
+                        </div>
+                        <!-- Etapa 2 -->
+                        <div class="relative flex flex-col lg:flex-row-reverse items-center gap-8">
+                            <div data-anim="fade-right" data-delay="100" class="lg:w-1/2 lg:text-left lg:pl-16 opacity-0 translate-x-10 transition-all duration-700 ease-out">
+                                <div class="inline-flex items-center gap-2 bg-purple-100 text-purple-700 rounded-full px-4 py-2 text-sm font-medium mb-4"><span>Fase 2</span></div>
+                                <h3 class="text-3xl font-semibold mb-4">Estratégia Jurídica</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg mb-6">Desenvolvemos uma estratégia personalizada, alinhando as melhores teses jurídicas com seus objetivos e apresentando um plano de ação claro.</p>
+                            </div>
+                            <div data-anim="scale-in" data-delay="200" class="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 text-white grid place-items-center shadow-xl opacity-0 scale-95 transition-all duration-700 ease-out">
+                                <i data-lucide="lightbulb" class="w-10 h-10"></i>
+                                <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-purple-100 text-purple-600 grid place-items-center text-sm font-bold">2</div>
+                            </div>
+                            <div data-anim="fade-left" data-delay="300" class="lg:w-1/2 lg:pr-16 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                                <img src="https://images.unsplash.com/photo-1600880292210-85938a169498?auto=format&fit=crop&w=1170&q=80" alt="Equipe de advogados planejando uma estratégia" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                            </div>
+                        </div>
+                        <!-- Etapa 3 -->
+                        <div class="relative flex flex-col lg:flex-row items-center gap-8">
+                            <div data-anim="fade-left" data-delay="100" class="lg:w-1/2 lg:text-right lg:pr-16 opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                                <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 rounded-full px-4 py-2 text-sm font-medium mb-4"><span>Fase 3</span></div>
+                                <h3 class="text-3xl font-semibold mb-4">Ação & Resolução</h3>
+                                <p class="text-gray-600 leading-relaxed text-lg mb-6">Executamos o plano de ação, seja em negociações, processos administrativos ou judiciais, mantendo você informado em cada etapa até a resolução do caso.</p>
+                            </div>
+                            <div data-anim="scale-in" data-delay="200" class="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 text-white grid place-items-center shadow-xl opacity-0 scale-95 transition-all duration-700 ease-out">
+                                <i data-lucide="check-circle" class="w-10 h-10"></i>
+                                <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-green-100 text-green-600 grid place-items-center text-sm font-bold">3</div>
+                            </div>
+                            <div data-anim="fade-right" data-delay="300" class="lg:w-1/2 lg:pl-16 opacity-0 translate-x-10 transition-all duration-700 ease-out">
+                                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1170&q=80" alt="Aperto de mãos simbolizando a resolução de um caso" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="testimonials" class="relative py-32 bg-white overflow-hidden">
+            <div id="testimonialsParallax" class="absolute inset-0 opacity-20" style="will-change: transform;">
+                <div class="absolute top-0 left-0 w-96 h-96 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 blur-3xl"></div>
+                <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-br from-pink-100 to-orange-100 blur-3xl"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div data-anim="fade-up" data-delay="100" class="inline-flex items-center gap-2 bg-pink-100 text-pink-700 rounded-full px-4 py-2 text-sm font-medium mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <i data-lucide="star" class="w-4 h-4"></i>
+                        <span>O que dizem sobre nós</span>
+                    </div>
+                    <h2 data-anim="fade-up" data-delay="200" class="text-5xl sm:text-6xl font-light tracking-tighter mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        A voz dos nossos
+                        <span class="font-semibold">clientes</span>
+                    </h2>
+                    <p data-anim="fade-up" data-delay="300" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        A confiança depositada em nosso trabalho é nosso maior ativo.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div data-anim="scale-in" data-delay="100" class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 opacity-0 scale-95">
+                        <div class="flex items-center gap-1 mb-6 text-yellow-400"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                        <p class="text-gray-700 leading-relaxed mb-8 text-lg">“A análise de contrato antes da compra do meu apartamento foi impecável. Identificaram cláusulas abusivas e me pouparam de uma grande dor de cabeça. Recomendo!”</p>
+                        <div class="flex items-center gap-4"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Mendes" class="w-12 h-12 rounded-full object-cover"><div><div class="font-semibold">Carlos Mendes</div><div class="text-gray-600 text-sm">Cliente - Compra de Imóvel</div></div></div>
+                    </div>
+                    <div data-anim="scale-in" data-delay="200" class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 opacity-0 scale-95">
+                        <div class="flex items-center gap-1 mb-6 text-yellow-400"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                        <p class="text-gray-700 leading-relaxed mb-8 text-lg">“Conseguiram regularizar um imóvel da minha família que estava com pendências há décadas. Processo de usucapião conduzido com maestria e agilidade.”</p>
+                        <div class="flex items-center gap-4"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Pereira" class="w-12 h-12 rounded-full object-cover"><div><div class="font-semibold">Ana Pereira</div><div class="text-gray-600 text-sm">Cliente - Ação de Usucapião</div></div></div>
+                    </div>
+                    <div data-anim="scale-in" data-delay="300" class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 opacity-0 scale-95">
+                        <div class="flex items-center gap-1 mb-6 text-yellow-400"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                        <p class="text-gray-700 leading-relaxed mb-8 text-lg">“Profissionalismo exemplar na condução de uma ação de despejo complicada. Foram transparentes e eficientes do início ao fim.”</p>
+                        <div class="flex items-center gap-4"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ricardo Oliveira" class="w-12 h-12 rounded-full object-cover"><div><div class="font-semibold">Ricardo Oliveira</div><div class="text-gray-600 text-sm">Cliente - Locador</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contact" class="relative py-32 bg-gray-50 overflow-hidden">
+            <div id="contactParallax" class="absolute inset-0 opacity-30" style="will-change: transform;">
+                <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 blur-3xl"></div>
+                <div class="absolute bottom-[-120px] right-[-120px] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-pink-100 to-orange-100 blur-xl"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div data-anim="fade-up" data-delay="100" class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 rounded-full px-4 py-2 text-sm font-medium mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Vamos conversar</span>
+                    </div>
+                    <h2 data-anim="fade-up" data-delay="200" class="text-5xl sm:text-6xl font-light tracking-tighter mb-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Agende sua
+                        <span class="font-semibold">Consulta</span>
+                    </h2>
+                    <p data-anim="fade-up" data-delay="300" class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                        Preencha o formulário e nossa equipe retornará em até 1 dia útil para iniciar sua consultoria personalizada.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <aside data-anim="fade-right" data-delay="200" class="opacity-0 translate-x-10 transition-all duration-700 ease-out">
+                        <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                            <h3 class="text-2xl font-semibold tracking-tight mb-6">Informações de Contato</h3>
+                            <div class="space-y-5">
+                                <a href="tel:+551133334444" class="group flex items-center gap-4 p-4 rounded-2xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all"><div class="w-12 h-12 rounded-xl bg-gray-900 text-white grid place-items-center"><i data-lucide="phone" class="w-6 h-6"></i></div><div><div class="text-sm text-gray-500">Telefone</div><div class="font-medium group-hover:text-gray-900 transition-colors">+55 (11) 3333-4444</div></div></a>
+                                <a href="mailto:contato@drneemias.adv.br" class="group flex items-center gap-4 p-4 rounded-2xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all"><div class="w-12 h-12 rounded-xl bg-indigo-600 text-white grid place-items-center"><i data-lucide="mail" class="w-6 h-6"></i></div><div><div class="text-sm text-gray-500">E-mail</div><div class="font-medium group-hover:text-gray-900 transition-colors">contato@drneemias.adv.br</div></div></a>
+                                <div class="flex items-start gap-4 p-4 rounded-2xl border border-gray-200"><div class="w-12 h-12 rounded-xl bg-gray-100 text-gray-800 grid place-items-center"><i data-lucide="map-pin" class="w-6 h-6"></i></div><div><div class="text-sm text-gray-500">Endereço</div><div class="font-medium">Av. Faria Lima, 4055 — São Paulo, SP</div></div></div>
+                            </div>
+                        </div>
+                    </aside>
+                    <div data-anim="fade-left" data-delay="250" class="opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                        <form id="contactForm" class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100" novalidate>
+                            <h3 class="text-2xl font-semibold tracking-tight mb-2">Descreva seu caso</h3>
+                            <p class="text-gray-600 mb-8">Responderemos com uma análise inicial e disponibilidade de agenda.</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div><label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nome completo</label><input id="name" name="name" type="text" required class="w-full rounded-xl border-gray-300 focus:border-gray-900 focus:ring-gray-900/20" placeholder="Seu nome"></div>
+                                <div><label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-mail</label><input id="email" name="email" type="email" required class="w-full rounded-xl border-gray-300 focus:border-gray-900 focus:ring-gray-900/20" placeholder="voce@email.com"></div>
+                                <div class="sm:col-span-2"><label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefone/WhatsApp</label><input id="phone" name="phone" type="tel" class="w-full rounded-xl border-gray-300 focus:border-gray-900 focus:ring-gray-900/20" placeholder="(11) 99999-0000"></div>
+                                <div class="sm:col-span-2"><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label><textarea id="message" name="message" rows="5" required class="w-full rounded-xl border-gray-300 focus:border-gray-900 focus:ring-gray-900/20" placeholder="Fale sobre sua necessidade, o imóvel envolvido e os objetivos desejados."></textarea></div>
+                                <div class="sm:col-span-2 flex items-start gap-3"><input id="consent" name="consent" type="checkbox" required class="mt-1 rounded border-gray-300 text-gray-900 focus:ring-gray-900/20"><label for="consent" class="text-sm text-gray-600">Concordo em ser contatado pela Dr. Neemias Advocacia e aceito a Política de Privacidade.</label></div>
+                            </div>
+                            <div class="mt-6 flex flex-col sm:flex-row items-center gap-4"><button type="submit" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors shadow-sm"><i data-lucide="send" class="w-5 h-5"></i>Enviar Mensagem</button></div>
+                            <div id="formAlert" class="sr-only" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                 <div>
+                    <a href="#hero" class="flex items-center justify-center md:justify-start gap-3 mb-4"><div class="w-9 h-9 rounded-xl bg-gray-900 text-white grid place-items-center shadow-sm"><span class="text-sm font-bold tracking-tighter">N</span></div><span class="text-lg font-semibold tracking-tight">Dr. Neemias Advocacia</span></a>
+                    <p class="text-gray-600 leading-relaxed max-w-sm">Especialistas em Direito Imobiliário, protegendo seu patrimônio com expertise e dedicação.</p>
+                </div>
+                <div class="text-sm text-gray-500">
+                    <div class="mb-2">© <span id="year"></span> Dr. Neemias Advocacia. Todos os direitos reservados.</div>
+                    <a href="#" class="hover:text-gray-800 transition-colors">Política de Privacidade</a> | <a href="#" class="hover:text-gray-800 transition-colors">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+      const $ = (sel, scope=document) => scope.querySelector(sel);
+      const $$ = (sel, scope=document) => Array.from(scope.querySelectorAll(sel));
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.lucide) lucide.createIcons();
+        $('#year').textContent = new Date().getFullYear();
+        const mobileMenu = $('#mobileMenu'), mobileBtn = $('#mobileMenuBtn'), mobileClose = $('#closeMobileMenu'), mobileLinks = $$('.mobile-nav-link');
+        const toggleMobile = (open) => { mobileMenu.style.transform = open ? 'translateX(0)' : 'translateX(100%)'; document.body.style.overflow = open ? 'hidden' : ''; };
+        mobileBtn?.addEventListener('click', () => toggleMobile(true));
+        mobileClose?.addEventListener('click', () => toggleMobile(false));
+        mobileMenu?.addEventListener('click', (e) => { if (e.target === mobileMenu.firstElementChild) toggleMobile(false); });
+        mobileLinks.forEach(l => l.addEventListener('click', () => toggleMobile(false)));
+        const header = $('#mainHeader'), headerHeight = () => header?.offsetHeight || 0;
+        $$('a[href^="#"]').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const id = link.getAttribute('href');
+            const target = $(id);
+            if (!target || id === '#') return;
+            e.preventDefault();
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - headerHeight() + 1, behavior: 'smooth' });
+          });
+        });
+        const onScrollHeader = () => { header.classList.toggle('shadow-md', window.scrollY > 10); };
+        window.addEventListener('scroll', onScrollHeader, { passive: true });
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const delay = parseInt(el.dataset.delay || '0', 10);
+              setTimeout(() => { el.style.opacity = 1; el.style.transform = 'none'; }, delay);
+              io.unobserve(el);
+            }
+          });
+        }, { threshold: 0.15 });
+        $$('[data-anim]').forEach(el => io.observe(el));
+        const ioCounters = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const target = parseInt(el.dataset.target || '0', 10);
+              let start = 0;
+              const duration = 2000;
+              const step = (timestamp) => {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const val = Math.floor(target * (progress / duration));
+                el.textContent = (val > target ? target : val).toLocaleString('pt-BR');
+                if (progress < duration) window.requestAnimationFrame(step);
+              };
+              window.requestAnimationFrame(step);
+              ioCounters.unobserve(el);
+            }
+          });
+        }, { threshold: 0.8 });
+        $$('.counter').forEach(el => ioCounters.observe(el));
+        const parallaxMap = [ { el: $('#heroBase'), factor: 0.1 }, { el: $('#aboutParallax'), factor: 0.06 }, { el: $('#expertiseParallax'), factor: 0.05 }, { el: $('#testimonialsParallax'), factor: 0.05 }, { el: $('#contactParallax'), factor: 0.05 } ].filter(p => p.el);
+        const onParallax = () => { const y = window.scrollY; parallaxMap.forEach(({ el, factor }) => { el.style.transform = `translate3d(0, ${y * factor}px, 0)`; }); };
+        window.addEventListener('scroll', onParallax, { passive: true });
+        const sections = ['hero','about','atuacao','process','testimonials','contact'].map(id => ({ id, el: $(`#${id}`)})).filter(s => s.el);
+        const navItems = $$('.section-nav');
+        const activateNav = (id) => { navItems.forEach(a => { const active = a.dataset.section === id; a.classList.toggle('text-gray-900', active); a.firstElementChild.nextElementSibling?.classList.toggle('scale-100', active); }); };
+        const ioSections = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { activateNav(entry.target.id); } }); }, { rootMargin: `-${headerHeight()}px 0px -60% 0px` });
+        sections.forEach(s => ioSections.observe(s.el));
+        const contactForm = $('#contactForm');
+        contactForm?.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const btn = contactForm.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          setTimeout(() => { showFormAlert('Mensagem enviada com sucesso!'); contactForm.reset(); btn.disabled = false; }, 900);
+        });
+        function showFormAlert(message, type='success') {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 z-[70] px-4 py-3 rounded-xl text-sm font-medium shadow-xl transition-all duration-300 ${type === 'success' ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => { toast.classList.add('opacity-0', 'translate-y-4'); }, 2400);
+            setTimeout(() => toast.remove(), 2800);
+        }
+      });
+    </script>
+</body>
+</html>
