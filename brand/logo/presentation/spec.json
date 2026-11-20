@@ -1,0 +1,37 @@
+{
+  "brand": "Nemias Martins Advocacia",
+  "tagline": "Advocacia imobiliária, condominial e cível",
+  "brief": "Escritório de advocacia em São Paulo, mais de 20 anos de atuação (desde 2000). Foco em Direito Condominial, Imobiliário, Contratual/Cível e Liberdade Religiosa. Público: síndicos, administradoras, condôminos e proprietários. A marca deve transmitir solidez, ética, tradição e atendimento próximo — sem os clichês de balança, martelo e coluna grega.",
+  "adjectives": ["sólido", "ético", "tradicional", "próximo"],
+  "criteria": "Reconhecível a 16 px, funciona em uma cor, distinto do azul-marinho com balança típico do setor, adequado às regras de publicidade da OAB (sóbrio, informativo).",
+  "industry": "services",
+  "mockups": ["business-card", "signage", "website", "social", "app-icon", "favicon-tab"],
+  "nav": ["Áreas de atuação", "Sobre", "Contato"],
+  "brand_color": "#1D3B36",
+  "tile_color": "#1D3B36",
+  "greyscale": false,
+  "designer": "Claude",
+  "round": 2,
+  "concepts": [
+    {
+      "name": "Pilares NM",
+      "symbol": "../final/nm-symbol-color.svg",
+      "lockup": "../final/nm-horizontal-color.svg",
+      "symbol_on_tile": "../final/nm-symbol-reverse.svg",
+      "lockup_on_dark": "../final/nm-horizontal-reverse.svg",
+      "idea": "N e M dividem a mesma coluna e repousam sobre um alicerce dourado: solidez, patrimônio e 20 anos de base.",
+      "rationale": [
+        "Três colunas lembram a fachada de um edifício — remete ao imobiliário e condominial sem desenhar uma casa",
+        "A coluna compartilhada une as iniciais: o advogado como ponto de apoio do cliente",
+        "O alicerce dourado é o único acento de cor — tradição e valor, sem ostentação",
+        "Verde-ardósia diferencia do azul-marinho dominante em escritórios de advocacia"
+      ]
+    }
+  ],
+  "recommendation": "Pilares NM em Verde Ardósia + Dourado Antigo, com nome em serifa clássica e 'ADVOCACIA' em sans espaçada.",
+  "next_steps": [
+    "Aprovar a versão final",
+    "Pesquisa de anterioridade no INPI antes de registrar",
+    "Aplicar no site, cartões, papel timbrado e assinatura de e-mail"
+  ]
+}
